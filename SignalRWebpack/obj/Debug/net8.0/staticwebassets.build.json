@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "eKtGUJlucaTrsFwa+Ohvt+Bysc7r6fW1SwA5Pt23AeM=",
+  "Source": "SignalRWebpack",
+  "BasePath": "_content/SignalRWebpack",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "SignalRWebpack\\wwwroot",
+      "Source": "SignalRWebpack",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\WitoldLipowski\\SignalRWebpack\\wwwroot\\",
+      "BasePath": "_content/SignalRWebpack",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\admin\\Desktop\\WitoldLipowski\\SignalRWebpack\\wwwroot\\index.html",
+      "SourceId": "SignalRWebpack",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\WitoldLipowski\\SignalRWebpack\\wwwroot\\",
+      "BasePath": "_content/SignalRWebpack",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}
