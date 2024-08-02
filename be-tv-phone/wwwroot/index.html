@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>ASP.NET Core SignalR with TypeScript and Webpack</title>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.js"
+    integrity="sha512-FzakzcmrNSXS5+DuuYSO6+5DcUZ417Na0vH1oAIo49mMBA8rHSgkKSjE2ALFOxdQ/kPqF3HZRzb0HQ+AvwXttg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<body>
+    <div id="divMessages" class="messages"></div>
+    <div class="input-zone">
+        <label id="lblMessage" for="tbMessage">Message:</label>
+        <input id="tbMessage" class="input-zone-input" type="text" />
+        <button id="btnSend">Send</button>
+    </div>
+    <script>
+
+
+        const divMessages = document.querySelector("#divMessages");
+        const tbMessage = document.querySelector("#tbMessage");
+        const btnSend = document.querySelector("#btnSend");
+        const username = new Date().getTime();
+
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/hub")
+            .build();
+
+            connection.on('cpmme')
+        connection.on("messageReceived", (message) => {
+            console.log(username, message)
+            const m = document.createElement("div");
+
+            m.innerHTML = `<div>${message}</div>`;
+
+            divMessages.appendChild(m);
+            divMessages.scrollTop = divMessages.scrollHeight;
+        });
+
+        connection.start().catch((err) => document.write(err));
+
+        tbMessage.addEventListener("keyup", (e) => {
+            if (e.key === "Enter") {
+                send();
+            }
+        });
+
+        btnSend.addEventListener("click", send);
+
+        function send() {
+            connection.send(123,123)
+                .then();
+        }
+    </script>
+</body>
+
+</html>

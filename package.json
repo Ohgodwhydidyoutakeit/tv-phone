@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:fe": "cd ./tv-phone && npm run start"
+    "start:fe": "cd ./fe-tv-phone && npm run start",
+    "start:be":" cd ./be-tv-phone && dotnet run",
+    "start:all":"concurrently \"yarn run start:fe\" \"yarn run start:be\""
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,14 @@
+:host {
+    width: 100%;
+}
+
+.ui-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    &__logo {
+        font-size: 1.25rem;
+    }
+}

@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+.buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    &__button {
+        height: 140px;
+        width: 250px;
+        border: 2px solid $light-pink;
+        background-color: $dark-pink;
+        border-radius: 2.5rem;
+
+        svg {
+            height: 100px;
+        }
+    }
+}

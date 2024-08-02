@@ -1,0 +1,36 @@
+@import '../../styles/variables';
+
+.joystick-wrapper {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex: 1;
+
+  &__element {
+    width: 100px;
+    height: 100px;
+    background: $dark-pink;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    touch-action: none;
+    /* Prevent default touch behavior */
+  }
+
+}
+
+.overlay {
+  width: 50px;
+  /* Adjust size as needed */
+  height: 50px;
+  border: 2px solid $purple;
+  /* Adjust size as needed */
+  background: $light-blue;
+  /* Semi-transparent overlay */
+  border-radius: 50%;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
